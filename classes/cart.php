@@ -35,7 +35,7 @@ class Cart
         $chquery = "SELECT * FROM tbl_cart WHERE productId = '$productId' AND sId = '$sId'";
         $getProductMatch = $this->db->select($chquery);
         if ($getProductMatch) {
-            $msg = "<span class = 'error mx-3'>This Product Added Already Go To Cart!</span>";
+            $msg = "<span class = 'error'>This Product Added Already Go To Cart!</span>";
             return $msg;
         } else {
             $addCartQuery = "INSERT INTO tbl_cart (sId,productId,productName,price,quantity,image)VALUES('$sId','$productId','$productName','$price','$quantity','$image')";
@@ -74,7 +74,8 @@ class Cart
             $this->removeFromCartById($cartId);
         } else {
             if ($updateCart) {
-                header("Location:cart-user.php");
+                $msg = "<h6 class='success'>Cart updated successfully!</h6>";
+                return $msg;
             } else {
                 $msg = "<h6 class='error'>Cart Not Updated</h6>";
                 return $msg;
@@ -156,13 +157,13 @@ class Cart
         $getorder = $this->db->select($getorder)->fetch_assoc();
         $productId = $getorder['productId'];
         $quantity = $getorder['quantity'];
-        
+
         $getstock = "SELECT * FROM tbl_stock WHERE productId = '$productId'";
         $getstock = $this->db->select($getstock);
         $getstock = mysqli_fetch_array($getstock);
         $convertedQty = $getstock['convertedQty'];
 
-        $updatedQty = $convertedQty-$quantity; 
+        $updatedQty = $convertedQty - $quantity;
 
         $updatequery = "UPDATE tbl_stock SET 
         convertedQty = '$updatedQty'

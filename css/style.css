@@ -444,8 +444,8 @@ z-index: 999;}
 .product-hover a i.fa {
     margin-right: 5px;
 }
-.product-hover a.add-to-cart-link {top: -25%;}
-.product-hover a.view-details-link { bottom: -25%;}
+.product-hover a.add-to-cart-link {top: -40%;}
+.product-hover a.view-details-link { bottom: -40%;}
 .single-product{
     text-align:center;
 }
@@ -475,9 +475,12 @@ z-index: 999;}
 .single-product {
   overflow: hidden;
 }
+.add-to-cart-link {
+  overflow: hidden;
+}
 .single-product:hover {}
-.single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
-.single-product:hover .product-hover a.view-details-link {bottom: 32%;}
+.single-product:hover .product-hover a.add-to-cart-link {top: 0%;}
+.single-product:hover .product-hover a.view-details-link {bottom: 0%;}
 .single-product:hover .product-hover:after{left: 0}
 
 
@@ -964,9 +967,7 @@ td.product-quantity div.quantity {
 td.actions div.coupon {
     float: left;
 }
-.cart-collaterals {
-    overflow: hidden;
-}
+
 .cross-sells {
     float: left;
     margin-right: 3%;
@@ -975,7 +976,7 @@ td.actions div.coupon {
 .cart_totals {
     float: right;
     margin-bottom: 50px;
-    width: 40%;
+    width: 100%;
 }
 .cart-collaterals h2 {
     color: #5a88ca;
@@ -1152,5 +1153,16 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
+}
+
+
+.success{
+    color:green;
+    font-weight: 600;
+    transition: 0.4s;
+}
+.error{
+    color:red;
+    font-weight: 600;
 }
 

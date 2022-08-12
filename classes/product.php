@@ -251,6 +251,14 @@ class Product
         }
     }
 
+    public function sidebarProduct(){
+        $query="SELECT * FROM tbl_product LIMIT 5";
+        $getProduct = $this->db->select($query);
+        return $getProduct;
+    }
+
+
+
 }
 
 

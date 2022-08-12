@@ -1,36 +1,21 @@
 <?php
 include "inc/header.php";
 include "inc/pagetitle.php";
+if (isset($_GET['proId'])) {
+    $productId = $_GET['proId'];
+}
+if (isset($_POST['submit'])) {
+    $quantity = $_POST['quantity'];
+    $addToCart = $cart->addToCart($quantity, $productId);
+    
+}
 ?>
 <div class="single-product-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Search Products</h2>
-                    <form action="">
-                        <input type="text" placeholder="Search products...">
-                        <input type="submit" value="Search">
-                    </form>
-                </div>
-
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Products</h2>
-                    <?php
-                    $getAllProduct = $product->getAllProduct();
-                    if ($getAllProduct) {
-                        while ($result = $getAllProduct->fetch_assoc()) { ?>
-                            <div class="thubmnail-recent">
-                                <img src="admin/<?php echo $result['image']; ?>" class="recent-thumb" alt="">
-                                <h2><a href="single-product.php?proId=<?php echo $result['productId'];?>"><?php echo $result['productName']; ?></a></h2>
-                                <div class="product-sidebar-price">
-                                    <span>$<?php echo $result['price']; ?></span>
-                                </div>
-                            </div>
-                    <?php }
-                    } ?>
-                </div>
+                <?php include "inc/sidebar.php"; ?>
             </div>
 
             <div class="col-md-8">
@@ -70,6 +55,11 @@ include "inc/pagetitle.php";
                         </div>
                         <div class="col-sm-6">
                             <div class="product-inner">
+                                <?php
+                                if(isset($addToCart)){
+                                    echo $addToCart;
+                                }
+                                ?>
                                 <h2 class="product-name"><?php echo $result['productName']; ?></h2>
                                 <div class="product-inner-price">
                                     <span>$<?php echo $result['price']; ?></span>
@@ -79,7 +69,7 @@ include "inc/pagetitle.php";
                                     <div class="quantity">
                                         <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                     </div>
-                                    <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                    <input class="add_to_cart_button" type="submit" name="submit" value="Add to Cart" />
                                 </form>
 
                                 <div class="product-inner-category">
@@ -118,31 +108,33 @@ include "inc/pagetitle.php";
                 <div class="related-products-wrapper">
                     <h2 class="related-products-title">Related Products</h2>
                     <div class="related-products-carousel">
-                        <?php 
+                        <?php
                         if (isset($_GET['proId'])) {
-                            $productId = $_GET['proId']; 
+                            $productId = $_GET['proId'];
                             $getProductById = $product->selectProductById($productId);
                             $getProductById = mysqli_fetch_array($getProductById);
                             $catId = $getProductById['catId'];
                             $getProductByCategory = $product->getProductByCategory($catId);
                             if ($getProductByCategory) {
-                                while ($result = $getProductByCategory->fetch_assoc()) {?>
-                        <div class="single-product">
-                            <div class="product-f-image">
-                                <img src="admin/<?php echo $result['image'];?>" alt="">
-                                <div class="product-hover">
-                                    <a href="cart-user.php?proId=<?php echo $result['productId'];?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.php?proId=<?php echo $result['productId'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                </div>
-                            </div>
+                                while ($result = $getProductByCategory->fetch_assoc()) { ?>
+                                    <div class="single-product">
+                                        <div class="product-f-image">
+                                            <img src="admin/<?php echo $result['image']; ?>" alt="">
+                                            <div class="product-hover">
+                                                <a href="cart-user.php?proId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            </div>
+                                        </div>
 
-                            <h2><a href=""><?php echo $result['productName'];?></a></h2>
+                                        <h2><a href=""><?php echo $result['productName']; ?></a></h2>
 
-                            <div class="product-carousel-price">
-                                <span>$<?php echo $result['price'];?></span>
-                            </div>
-                        </div>
-                        <?php }}} ?>
+                                        <div class="product-carousel-price">
+                                            <span>$<?php echo $result['price']; ?></span>
+                                        </div>
+                                    </div>
+                        <?php }
+                            }
+                        } ?>
                     </div>
                 </div>
             </div>

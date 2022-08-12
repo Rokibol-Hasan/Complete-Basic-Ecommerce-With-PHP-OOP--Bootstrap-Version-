@@ -62,7 +62,7 @@ $customer = new Customer();
                         <ul>
                             <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="cart-user.php"><i class="fa fa-user"></i> My Cart</a></li>
                             <li>
                                 <?php
                                 if (isset($_GET['cid'])) {
@@ -112,14 +112,15 @@ $customer = new Customer();
                 </div>
 
                 <div class="col-sm-6">
+                    <?php 
+                    $getAllCartRow = $cart->getAllCartRow();
+                    if (!empty($getAllCartRow)) {?>
                     <div class="shopping-item">
-                        <a href="cart.php">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">
+                        <a href="cart-user.php">Cart - <span class="cart-amunt">$<?php echo Session::get("grandTotal"); ?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">
                                 <?php
                                 $checkCart = $cart->checkCartData();
                                 if ($checkCart) {
-                                    $sum = Session::get("sum");
-                                    $qty = Session::get("qty");
-                                    echo "Qty- " . $qty . " : " . $sum . "$";
+                                    echo Session::get("qty");
                                 } else {
                                     echo "(0)";
                                 }
@@ -127,6 +128,7 @@ $customer = new Customer();
                                 ?>
                             </span></a>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

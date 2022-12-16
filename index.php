@@ -49,13 +49,13 @@ include "inc/slider.php";
                             while ($result = $getAllProduct->fetch_assoc()) { ?>
                                 <div class="single-product card p-2">
                                     <div class="product-f-image">
-                                        <img src="admin/<?php echo $result['image']; ?>" alt="">
+                                        <img src="admin/<?php echo $result['image']; ?>" style="height: 200px;" alt="">
                                         <div class="product-hover">
-                                            <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="single-product.php?productId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="single-product.php?productId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
-                                    <h2><a href="single-product.php?proId=<?php echo $result['productId']; ?>"><?php echo $result['productName']; ?></a></h2>
+                                    <h2><a href="single-product.php?productId=<?php echo $result['productId']; ?>"><?php echo $result['productName']; ?></a></h2>
                                     <p><?php echo $fm->textShorten($result['body'], 100) ?></p>
 
                                     <div class="product-carousel-price">
@@ -83,14 +83,14 @@ include "inc/slider.php";
                             while ($result = $getFeaturedProduct->fetch_assoc()) { ?>
                                 <div class="single-product card p-2">
                                     <div class="product-f-image">
-                                        <img src="admin/<?php echo $result['image']; ?>" alt="">
+                                        <img style="height: 200px;" src="admin/<?php echo $result['image']; ?>" alt="">
                                         <div class="product-hover">
-                                            <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="single-product.php?productId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="single-product.php?productId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="single-product.php?proId=<?php echo $result['productId']; ?>"><?php echo $result['productName']; ?></a></h2>
+                                    <h2><a href="single-product.php?productId=<?php echo $result['productId']; ?>"><?php echo $result['productName']; ?></a></h2>
                                     <p><?php echo $fm->textShorten($result['body'], 100) ?></p>
 
                                     <div class="product-carousel-price">

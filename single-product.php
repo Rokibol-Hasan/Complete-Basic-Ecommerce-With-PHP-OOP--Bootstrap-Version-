@@ -1,8 +1,8 @@
 <?php
 include "inc/header.php";
 include "inc/pagetitle.php";
-if (isset($_GET['proId'])) {
-    $productId = $_GET['proId'];
+if (isset($_GET['productId'])) {
+    $productId = $_GET['productId'];
 }
 if (isset($_POST['submit'])) {
     $quantity = $_POST['quantity'];
@@ -23,16 +23,16 @@ if (isset($_POST['submit'])) {
                     <div class="product-breadcroumb">
                         <a href="index.php">Home</a>
                         <?php
-                        if (isset($_GET['proId'])) {
-                            $productId = $_GET['proId'];
+                        if (isset($_GET['productId'])) {
+                            $productId = $_GET['productId'];
                             $getSpecCat = $product->getSpecCat($productId);
                             $getSpecCat = mysqli_fetch_array($getSpecCat); ?>
                             <a href=""> <?php echo $getSpecCat['catName']; ?>
                             </a>
                         <?php } ?>
                         <?php
-                        if (isset($_GET['proId'])) {
-                            $productId = $_GET['proId'];
+                        if (isset($_GET['productId'])) {
+                            $productId = $_GET['productId'];
                             $getProductById = $product->selectProductById($productId);
                             $getProductById = mysqli_fetch_array($getProductById); ?>
                             <a href=""><?php echo $getProductById['productName']; ?></a>
@@ -42,8 +42,8 @@ if (isset($_POST['submit'])) {
                     <div class="row">
                         <div class="col-sm-6">
                             <?php
-                            if (isset($_GET['proId'])) {
-                                $productId = $_GET['proId'];
+                            if (isset($_GET['productId'])) {
+                                $productId = $_GET['productId'];
                                 $getProductById = $product->selectProductById($productId);
                                 if ($getProductById) {
                                     while ($result = $getProductById->fetch_assoc()) { ?>
@@ -74,8 +74,8 @@ if (isset($_POST['submit'])) {
 
                                 <div class="product-inner-category">
                                     <?php
-                                        if (isset($_GET['proId'])) {
-                                            $productId = $_GET['proId'];
+                                        if (isset($_GET['productId'])) {
+                                            $productId = $_GET['productId'];
                                             $getSpecCat = $product->getSpecCat($productId);
                                             $getSpecCat = mysqli_fetch_array($getSpecCat); ?>
                                         <p>Category: <a href="shop.php?catId=<?php echo $result['catId']; ?>"><?php echo $getSpecCat['catName']; ?></a>Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
@@ -109,8 +109,8 @@ if (isset($_POST['submit'])) {
                     <h2 class="related-products-title">Related Products</h2>
                     <div class="related-products-carousel">
                         <?php
-                        if (isset($_GET['proId'])) {
-                            $productId = $_GET['proId'];
+                        if (isset($_GET['productId'])) {
+                            $productId = $_GET['productId'];
                             $getProductById = $product->selectProductById($productId);
                             $getProductById = mysqli_fetch_array($getProductById);
                             $catId = $getProductById['catId'];
@@ -121,8 +121,8 @@ if (isset($_POST['submit'])) {
                                         <div class="product-f-image">
                                             <img src="admin/<?php echo $result['image']; ?>" alt="">
                                             <div class="product-hover">
-                                                <a href="cart-user.php?proId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                <a href="single-product.php?proId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                <a href="cart-user.php?productId=<?php echo $result['productId']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                <a href="single-product.php?productId=<?php echo $result['productId']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                             </div>
                                         </div>
 

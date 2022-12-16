@@ -1,0 +1,58 @@
+[
+  { "domain": "C:\\Users\\Smart", "name": "Network.txt", "value": null },
+  { "domain": "Email:", "name": "Premium", "value": null },
+  {
+    "domain": "secured.netflix.com",
+    "path": "/",
+    "name": "thx_guid",
+    "value": "b9f251c6a52b4ead93c3a0394ffeda53"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "nfvdid",
+    "value": "BQFmAAEBEAvPbe9NbPxdQj0LEBvuJLxgfQc3ES3wqxyyBOCmd3OI-0O0-LEec41xtWDWLf7uKN0QmSmho1vXqyWETJ8Cfy4UDVyxueT8HRGR76aKVIDx-eNlSZkKZl2qjfQx8TLaE02pAd0e6zK-uWfwXrZwUT-A"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "NetflixId",
+    "value": "ct%3DBQAOAAEBEJ3IcJ0PXiQ7b1piSUapfxmB8EFArtcLeirdeaWYTinGXXsidz7m3VmmNoXwteq4PUQ_FdkXN6VQmAsxJKRbiVP8Qx5vwf4S3s0ketz0Ow3Lf7sScxi0C6P9XHsLJwD9yG3YZUS4X0rGVqxIQkSRKRbGby-sQlx4c6HsnsGNVxFocmu5JTwYFmUGKRiOEs1cVKQm3v_thQe-Mb5EWKMvbKz9qvtlJ34EP7HfLgbDAfhLwSRNwqTYVSnn4qsN7fzyIL5uZD_DUn-jYJAXW_Kg66ZQ-ex3qyODg7eFVztT1uttUh4WD9o6bsxGa3p5vX0MrfnfswrAu9IFvfR8v1aDEyMSsqQnGmHE2xnviYG5d5CTq6AgQsbg36odpCzk--amlBlIowGCzHcTVQV1oIY5d1IaXQi1HGNadQQ5HzqopYMTxctew5e6pgpuLGPucL715mrHZm8a0-oqMCjygibztUqWV-6eRYrPBSvuTu5dGzRqu6KIKHHHDyS7Cj_CxYEALdVZLgAoDU15o1q3EoUUYk4b1QoRCiATx272F2CQKfhocbJQeEAUw_6cQuR2iCJSRt5LW3fZZ9bGeqZQY7YcY8NFAK6_q5b9jEyCgbwNkzHpRCyVVwPwtGWmdPFwi1N-QD38D4CUQf1kLmXf7hTf934d5E2P471tXHJhe_uL_YvazX4.%26bt%3Ddbl%26ch%3DAQEAEAABABQzO01dPSWcgcfofCUQqhQmrGAyD-ydaNg.%26v%3D2%26mac%3DAQEAEAABABSPwshFlIWobaTp511ceRnkEZqF0UUKMnk."
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "OptanonAlertBoxClosed",
+    "value": "2022-02-18T12:10:09.705Z"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "OptanonConsent",
+    "value": "isIABGlobal=false&datestamp=Fri+Feb+18+2022+23%3A10%3A09+GMT%2B1100+(Australian+Eastern+Daylight+Time)&version=6.6.0&consentId=92448958-5501-4a3a-9a9b-70c5c6272cf7&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1&hosts=H12%3A1%2CH13%3A1%2CH28%3A1&AwaitingReconsent=false"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "SecureNetflixId",
+    "value": "v%3D2%26mac%3DAQEAEQABABRKfOhwP1BJRXpq4e5sCLAZK0FCaboXyPM.%26dt%3D1645186210995"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "pas",
+    "value": "%7B%22supplementals%22%3A%7B%22muted%22%3Atrue%7D%7D"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "playerPerfMetrics",
+    "value": "%7B%22uiValue%22%3A%7B%22throughput%22%3A11910.3%2C%22throughputNiqr%22%3A2.895088130027062%7D%2C%22mostRecentValue%22%3A%7B%22throughput%22%3A11910.3%2C%22throughputNiqr%22%3A2.895088130027062%7D%7D"
+  },
+  {
+    "domain": ".netflix.com",
+    "path": "/",
+    "name": "memclid",
+    "value": "d8591afc-5a3c-45e3-8e67-5d5d5194dc3e"
+  }
+]

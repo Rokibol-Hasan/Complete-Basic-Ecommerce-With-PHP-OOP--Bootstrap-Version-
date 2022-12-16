@@ -8,7 +8,7 @@ include "inc/pagetitle.php";
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="single-shop-product">
-                    <div class="product-upper">
+                    <div class="product-upper"> 
                         <img src="img/product-2.jpg" alt="">
                     </div>
                     <h2><a href="">Apple new mac book 2015 March :P</a></h2>

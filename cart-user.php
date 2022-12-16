@@ -54,11 +54,11 @@ if (isset($_POST['submit'])) {
                                                 </td>
 
                                                 <td class="product-thumbnail">
-                                                    <a href="single-product.php?proId=<?php echo $result['proId']; ?>"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="admin/<?php echo $result['image']; ?>"></a>
+                                                    <a href="single-product.php?productId=<?php echo $result['productId']; ?>"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="admin/<?php echo $result['image']; ?>"></a>
                                                 </td>
 
                                                 <td class="product-name">
-                                                    <a href="single-product.php?proId=<?php echo $result['proId']; ?>"><?php echo $result['productName']; ?></a>
+                                                    <a href="single-product.php?productId=<?php echo $result['productId']; ?>"><?php echo $result['productName']; ?></a>
                                                 </td>
 
                                                 <td class="product-price">
